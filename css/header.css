@@ -4,7 +4,7 @@
     position: fixed;
     left: 0;
     top: 0;
-    background-color: #FFFFFF;
+    background-color: var(--white);
     /* box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px; */
 }
 
@@ -30,7 +30,7 @@
     left: 50%;
     top: 100%;
     display: flex;
-    background-color: #FFFFFF;
+    background-color: var(--white);
 }
 
 .form input[type=text] {
@@ -56,17 +56,17 @@
 
 .account .login {
     text-decoration: none;
-    color: var(--ligthBlue);
+    color: var(--lightBlue);
 }
 
 .account .register {
     width: 60px;
     height: 19px;
     text-decoration: none;
-    background-color: #0095F6;
-    color: #FFFFFF;
+    background-color: var(--lightBlue);
+    color: var(--white);
     padding: 10px 20px;
-    border-radius: var(--borderRadius);
+    border-radius: .3em;
 }
 
 .navbar {
@@ -85,7 +85,7 @@
     position: fixed;
     left: 0;
     top: 0;
-    background-color: #FFFFFF; 
+    background-color: var(--white); 
     margin-left: -110%;
     transition: all 0.5s;
     padding: 1em;
@@ -165,17 +165,7 @@
 
     .account .login {
         text-decoration: none;
-        color: var(--ligthBlue);
-    }
-
-    .btn {
-        width: 60px;
-        height: 19px;
-        text-decoration: none;
-        background-color: #0095F6;
-        color: #FFFFFF;
-        padding: 10px 20px;
-        border-radius: var(--borderRadius);
+        color: var(--lightBlue);
     }
 
     /*.account-modal {
@@ -210,6 +200,6 @@
     }
 
     .menu-link:hover {
-        border-bottom: 2px solid var(--ligthBlue);
+        border-bottom: 2px solid var(--lightBlue);
     }
 }
