@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontalibros</title>
+    <!-- Generic styles -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- style header -->
+    <link rel="stylesheet" href="/css/header.css">
+    <!-- style main -->
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/images/favicon1.png" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Inicio de header -->
+    <div class="wrapper">
+        <header class="header" id="header">
+            <span class="navbar" id="btn-menu"><i class="fa-solid fa-bars"></i></span>
+            <figure class="logo">
+                <img src="/images/logo-header.png" width="200px" alt="logo Fontalibros">
+            </figure>
+            <form class="form" action="">
+                <input class="input" name="search" type="text" placeholder="Buscar por título o autor">
+                <button class="btn-search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+            <ul class="account account-modal" id="account">
+                <li><a href="#" class="login" id="login-btn">Iniciar sesión</a></li>
+                <li><a href="#" class="register" id="register-btn">Registrarse</a></li>
+            </ul>
+            <button class="btn-shopping-cart" id="btn-shopping-cart"><i class="fa-solid fa-cart-shopping"></i></button>
+        </header>
+        <nav class="main-nav" id="main-nav">
+            <ul class="menu" id="menu">
+                <span class="navbar btn-close" id="btn-close"><i class="fa-solid fa-xmark"></i></span>
+                <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
+                <li class="menu-item"><a href="#" class="menu-link">Cómo funciona</a></li>
+                <li class="menu-item container-submenu">
+                    <a href="#" class="menu-link submenu-btn">Libros <i class="fa-solid fa-angle-down"></i></a>
+                    <ul class="submenu">
+                        <li class="menu-item"><a href="#" class="menu-link">Educación</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">Literatura</a></li>
+                        <li class="menu-item"><a href="#last-added" class="menu-link">Infantil</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="#" class="menu-link">Contacto</a></li>
+                <li class="menu-item"><a href="#" class="menu-link">Vende tus libros</a></li>
+                <!-- <ul class="account-modal" id="account">
+                    <li><a href="#">Iniciar sesión</a></li>
+                    <li><a href="#">Registrarse</a></li>
+                </ul> -->
+            </ul>
+        </nav>
+    </div>
+    <!-- Fin de header -->
+
+    <main class="main" id="main">
+        <!-- Inicio de section introduccion -->
+        <section class="intro" id="intro">
+            <div class="intro-text">
+                <h1>Compra o vende <span class="span-word">libros</span> de segunda mano</h1>
+                <p>Dale la oportunidad a un libro de segunda mano o convierte en dinero aquellos que ya no necesites.</p>
+                <p>¡Te conectamos con ellos!</p>
+                <a class="btn" href="#">Leer más</a>
+            </div>
+            <figure class="intro-img">
+                <img src="/images/Reading-book.svg" alt="Leyendo libro">
+            </figure>
+        </section>
+        <!-- Fin de section introduccion-->
+
+        <!-- Inicio de section ultimos añadidos -->
+        <section class="last-added" id="last-added">
+            <h2>Últimos añadidos</h2>
+            <div class="book-container" id="book-container">
+                <div class="card" id="card">
+                    <figure class="img-book">
+                        <img src="" alt="libro">
+                    </figure>
+                    <h3 class="book-title" id="book-title">Titulo</h3>
+                    <p>Autor</p>
+                    <p>Estado del libro</p>
+                    <span>Precio</span>
+                    <button class="btn-add-to-cart" id="btn-add-to-car">Añadir al carrito</button>
+                </div>
+            </div>
+        </section>
+        <!-- Fin de section ultimos añadidos -->
+
+        <iframe src="footer.html" frameborder="0" scrolling="no" width="100%" height="800px"></iframe>
+
+    </main>
+    <!-- Scripts -->
+    <script defer src="/Scripst/menu.js"></script>
+</body>
+</html>
