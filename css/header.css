@@ -4,7 +4,7 @@
     position: fixed;
     left: 0;
     top: 0;
-    background-color: var(--white);
+    background-color: var(--chalkWhite);
     /* box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px; */
 }
 
@@ -22,6 +22,12 @@
     font-size: 1.5em;
 }
 
+.btn-shopping-cart:hover {
+    transition: all 0.3s;
+    color: var(--darkgray);
+    cursor: pointer;
+}
+
 .form {
     width: 100%;
     padding: 1em;
@@ -30,7 +36,7 @@
     left: 50%;
     top: 100%;
     display: flex;
-    background-color: var(--white);
+    background-color: var(--chalkWhite);
 }
 
 .form input[type=text] {
@@ -46,7 +52,10 @@
     background-color: transparent;
     border: 1px solid var(--ligthgray);
     border-radius: 0 .3em .3em 0;
+    cursor: pointer;
 }
+
+
 /* Pendiente para organizar */
 .account {
     display: none;
@@ -54,19 +63,8 @@
     list-style: none;
 }
 
-.account .login {
+.account .login, .register {
     text-decoration: none;
-    color: var(--lightBlue);
-}
-
-.account .register {
-    width: 60px;
-    height: 19px;
-    text-decoration: none;
-    background-color: var(--lightBlue);
-    color: var(--white);
-    padding: 10px 20px;
-    border-radius: .3em;
 }
 
 .navbar {
@@ -85,7 +83,7 @@
     position: fixed;
     left: 0;
     top: 0;
-    background-color: var(--white); 
+    background-color: var(--chalkWhite);
     margin-left: -110%;
     transition: all 0.5s;
     padding: 1em;
@@ -156,6 +154,7 @@
     } 
 
     .account {
+        display: block;
         width: 35%;
         display: flex;
         justify-content: space-between;
@@ -163,10 +162,15 @@
         list-style: none;
     }
 
-    .account .login {
+    .login {
         text-decoration: none;
         color: var(--lightBlue);
     }
+
+    .login:hover {
+        transition: all 0.3s;
+        color: var(--ligthgray);
+    } 
 
     /*.account-modal {
         display: none;
@@ -177,7 +181,7 @@
         margin-left: 0;
         display: flex;
         justify-content: center;
-        gap: 5em;
+        gap: 4em;
     }
 
     .container-submenu {
@@ -201,5 +205,12 @@
 
     .menu-link:hover {
         border-bottom: 2px solid var(--lightBlue);
+    }
+
+    #sell-book {
+        background-color: var(--lightBlue);
+        border-radius: .3em;
+        padding: 10px 20px;
+        color: var(--white);
     }
 }

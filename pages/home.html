@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="/css/header.css">
     <!-- style main -->
     <link rel="stylesheet" href="/css/main.css">
+    <!-- style forms -->
+    <link rel="stylesheet" href="/css/forms.css">
     <!-- style footer -->
     <link rel="stylesheet" href="/css/footer.css">
     <!-- Favicon -->
@@ -27,16 +29,16 @@
     <div class="wrapper">
         <header class="header" id="header">
             <span class="navbar" id="btn-menu"><i class="fa-solid fa-bars"></i></span>
-            <figure class="logo">
+            <a href="#" class="logo">
                 <img src="/images/logo-header.png" width="200px" alt="logo Fontalibros">
-            </figure>
+            </a>
             <form class="form" action="">
                 <input class="input" name="search" type="text" placeholder="Buscar por título o autor">
                 <button class="btn-search"><i class="fa-solid fa-magnifying-glass"></i></button>
             </form>
             <ul class="account account-modal" id="account">
-                <li><a href="#" class="login" id="login-btn">Iniciar sesión</a></li>
-                <li><a href="#" class="register" id="register-btn">Registrarse</a></li>
+                <li><a href="#footer" class="login" id="login-btn">Iniciar sesión</a></li>
+                <li><a href="#footer" class="register btn" id="register-btn">Registrarse</a></li>
             </ul>
             <button class="btn-shopping-cart" id="btn-shopping-cart"><i class="fa-solid fa-cart-shopping"></i></button>
         </header>
@@ -50,11 +52,11 @@
                     <ul class="submenu">
                         <li class="menu-item"><a href="#" class="menu-link">Educación</a></li>
                         <li class="menu-item"><a href="#" class="menu-link">Literatura</a></li>
-                        <li class="menu-item"><a href="#last-added" class="menu-link">Infantil</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">Infantil</a></li>
                     </ul>
                 </li>
-                <li class="menu-item"><a href="#" class="menu-link">Contacto</a></li>
-                <li class="menu-item"><a href="#" class="menu-link">Vende tus libros</a></li>
+                <li class="menu-item"><a href="#contact" class="menu-link">Contacto</a></li>
+                <li class="menu-item"><a href="#" class="menu-link" id="sell-book"><i class="fa-solid fa-book"></i> Vende tus libros</a></li>
                 <!-- <ul class="account-modal" id="account">
                     <li><a href="#">Iniciar sesión</a></li>
                     <li><a href="#">Registrarse</a></li>
@@ -69,9 +71,9 @@
         <section class="intro" id="intro">
             <div class="intro-text">
                 <h1>Compra o vende <span class="span-word">libros</span> de segunda mano</h1>
-                <p>Dale la oportunidad a un libro de segunda mano o convierte en dinero aquellos que ya no necesites.</p>
+                <p class="para">Dale la oportunidad a un libro de segunda mano o convierte en dinero aquellos que ya no necesites.</p>
                 <p>¡Te conectamos con ellos!</p>
-                <a class="btn" href="#">Leer más</a>
+                <a class="btn button" href="#">Leer más</a>
             </div>
             <figure class="intro-img">
                 <img src="/images/Reading-book.svg" alt="Leyendo libro">
@@ -96,12 +98,29 @@
             </div>
         </section>
         <!-- Fin de section ultimos añadidos -->
+
+        <!-- Inicio section formulario de contacto  -->
+        <section class="contact" id="contact">
+            <h2>Contacto</h2>
+            <form class="form-contact">
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre aquí" class="inputex">
+                    <label for="email">Correo:</label>
+                    <input type="email" name="email" id="email" placeholder="Ingresa tu correo aquí" class="inputex">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea name="mensaje" id="mensaje" placeholder="Déjanos tu mensaje aquí" class="inputex"></textarea>
+                    <button type="submit" value="Enviar" class="btn">Enviar</button>
+                </div>
+            </form>
+        </section>
+        <!-- Fin section formulario de contacto -->
     </main>
 
      <!-- Inicio de footer-->
      <footer class="footer" id="footer">
-        <div class="firs-container-footer">
-            <div class="left-container">
+        <div class="footer-container">
+            <div class="container">
                 <!-- <figure class="white-logo">
                 <img src="/images/Logo_blanco_footer.png" alt="Logo Fontalibros blanco">
                 </figure> -->
@@ -112,8 +131,8 @@
                     <li><a href="#" class="item-footer">Preguntas frecuentes</a></li>
                 </ul>
             </div>
-            
-            <div class="right-container">
+                
+            <div class="container">
                 <h4>Más información</h4>
                 <ul class="info-list" id="help-list">
                     <li><a href="#" class="item-footer">Contacto</a></li>
@@ -121,21 +140,20 @@
                     <li><a href="#" class="item-footer">Diseñado y construido por María Castro</a></li>
                 </ul>
             </div>
-        </div>
-
-        <div class="second-container-footer">
-            <div class="copyright">
-                <span> &copy; Copyright 2023 | Todos los derechos reservados</span>
-            </div>
-            <div class="social-media">
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+    
+            <div class="container">
+                <div class="social-media">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
             </div>
         </div>
+        <p> &copy; Copyright 2023 | Todos los derechos reservados</p>
     </footer>
     <!-- Fin de footer--> 
     <!-- Scripts -->
     <script defer src="/Scripst/menu.js"></script>
+    <script defer src="/Scripst/main.js"></script>
 </body>
 </html>

@@ -1,7 +1,8 @@
 .main {
-    padding: 2em;
+    padding: 0 2em;
 }
 
+/* Intro Fontalibros */
 .intro {
     width: 100%;
     height: 85vh;
@@ -18,7 +19,7 @@
 }
 
 .span-word {
-    color: var(--ligthBlue);
+    color: var(--lightBlue);
 }
 
 .intro p {
@@ -36,13 +37,54 @@
     background-color: #0095F6;
     color: #FFFFFF;
     padding: 10px 20px;
+    border: none;
     border-radius: .3em;
+}
+/* fin Intro Fontalibros */
+
+/* inicio como funciona */
+.how-container {
+    /* display: none; */
+    width: 100%;
+}
+
+.howork {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 2em;
+}
+
+.howork img{
+    display: none;
+}
+
+.howork p {
+    color: var(--darkgray);
+}
+
+.howork_book {
+    margin-bottom: 1em;
+}
+
+.howork_book h3 {
+    margin-bottom: .5em;
+}
+
+.how-list {
+    padding: 0 1em;
+    color: var(--darkgray);
 }
 
 @media (min-width: 950px) {
+    .main {
+        padding: 0 5em;
+    }
+
+/* Intro Fontalibros */
     .intro {
         width: 100%;
-        height: 85vh;
+        height: 80vh;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -60,5 +102,37 @@
 
     .intro-img img {
         object-fit: cover;
+    }
+
+/* inicio como funciona */
+    .how-container {
+        margin-top: 50px;
+    }
+
+    .howork {
+        flex-wrap: nowrap;
+    }
+
+    .howork div {
+        width: 50%;
+    }
+
+    .howork h2 {
+        margin: 3em 0;
+    }
+
+    .howork img{
+        display: block;
+        width: 450px;
+    }
+
+    .howork p {
+        margin-top: 1em;
+        line-height: 2em;
+        color: var(--darkgray);
+    }
+
+    .how-list {
+        line-height: 2em;
     }
 }

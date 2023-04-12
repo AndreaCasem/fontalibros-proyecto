@@ -28,8 +28,11 @@ html {
 
 body {
     padding-top: 130px;
+    background-color: var(--chalkWhite);
 }
+
 /* Estilos generales para main*/
 section[id] {
     scroll-margin-top: 150px;
 }
+
