@@ -1,12 +1,16 @@
 .main {
     padding: 0 2em;
+    margin-top: 3em;
 }
 
 /* Intro Fontalibros */
-.intro {
+.home {
     width: 100%;
-    height: 85vh;
-    /* background-color: antiquewhite; */
+    flex-direction: column;
+}
+
+.intro {
+    margin-bottom: 2em;
 }
 
 .intro-img {
@@ -42,9 +46,37 @@
 }
 /* fin Intro Fontalibros */
 
+/* inicio últimos añadidos */
+.last-added {
+    margin-bottom: 2em;
+}
+
+.last-book-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: .5em;
+}
+
+.card {
+    width: 100%;
+    padding: 1em;
+    border-radius: 0.3em;
+    text-align: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+}
+
+.img-book img {
+    width: 100%;
+    border-radius: 0.2em;
+    object-fit: cover;
+}
+/* fin últimos añadidos */
+
 /* inicio como funciona */
 .how-container {
-    /* display: none; */
     width: 100%;
 }
 
@@ -76,6 +108,15 @@
     color: var(--darkgray);
 }
 
+/* [data-content] {
+    display: none;
+}
+
+.active[data-content] {
+    display: contents;
+} */
+
+
 @media (min-width: 950px) {
     .main {
         padding: 0 5em;
@@ -83,12 +124,9 @@
 
 /* Intro Fontalibros */
     .intro {
-        width: 100%;
-        height: 80vh;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        /* background-color: antiquewhite; */
     }
     
     .intro-img {
@@ -99,10 +137,13 @@
     .intro-text {
         width: 60%;
     }
-
-    .intro-img img {
-        object-fit: cover;
+/* Fin intro Fontalibros */
+    
+/* inicio últimos añadidos */
+    .card {
+        width: 20%;
     }
+/* fin últimos añadidos */
 
 /* inicio como funciona */
     .how-container {

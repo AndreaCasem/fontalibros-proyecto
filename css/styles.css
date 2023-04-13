@@ -27,12 +27,16 @@ html {
 }
 
 body {
-    padding-top: 130px;
+    padding-top: 120px;
     background-color: var(--chalkWhite);
 }
 
 /* Estilos generales para main*/
 section[id] {
     scroll-margin-top: 150px;
-}
+} 
 
+h2 {
+    text-align: center;
+    margin-bottom: 1.5em;
+}

@@ -1,6 +1,7 @@
 .footer {
     width: 100%;
-    padding: 5em;
+    min-height: 200px;
+    padding: 2em 5em;
     background-color: var(--secondBlack);
     color: var(--white);
 }

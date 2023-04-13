@@ -96,10 +96,15 @@
 
 .menu-link {
     display: block;
-    padding: .8em 0;
+    padding: 1em 0;
     color: var(--black);
     font-size: 1em;
-    text-decoration: none;
+    cursor: pointer;
+}
+
+.menu-link:hover {
+    color: var(--secondBlack);
+    transition: all 0.3s;
 }
 
 .submenu {
@@ -108,9 +113,21 @@
     transition: all 0.3s;
 }
 
+.submenu .menu-link {
+    background-color: var(--white);
+}
+
 .mostrar {
     margin-left: 0;
 }
+
+/* [data-content] {
+    display: none;
+}
+
+.active[data-content] {
+    display: contents;
+} */
 
 @media (min-width: 950px) {
     .header {
@@ -191,11 +208,13 @@
     .submenu {
         position: absolute;
         top: 3.1em;
-        width: 100px;
+        width: 120px;
+        text-align: center;
         overflow: visible;
-        z-index: 0;
+        z-index: 1000;
         opacity: 0;
         visibility: hidden;
+        background-color: var(--ligthgray);
     }
 
     .container-submenu:hover .submenu {
@@ -205,12 +224,21 @@
 
     .menu-link:hover {
         border-bottom: 2px solid var(--lightBlue);
+        cursor: pointer;
     }
 
     #sell-book {
-        background-color: var(--lightBlue);
+        border: 1px solid var(--lightBlue);
         border-radius: .3em;
         padding: 10px 20px;
-        color: var(--white);
+        color: var(--lightBlue);
     }
+
+    /* [data-content] {
+        display: none;
+    }
+    
+    .active[data-content] {
+        display: contents;
+    } */
 }

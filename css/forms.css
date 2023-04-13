@@ -1,13 +1,12 @@
 /* Formulario de contacto */
 .contact {
-    flex-direction: column;
-    min-height: 80vh;
-    /* border: 1px solid black; */
+    width: 100%;
+    min-height: 100vh;
+
 }
 
 .form-contact {
     width: 100%;
-    margin: 1.5em 0;
     padding: 3em;
     border-radius: 0.3em;
     background-color: var(--white);
@@ -23,6 +22,15 @@
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
+/* [data-content] {
+    display: none;
+}
+
+.active[data-content] {
+    display: contents;
+}  */
+
+
 @media (min-width: 950px) {
     .contact {
         display: grid;
@@ -30,6 +38,15 @@
     }
 
     .form-contact {
+        width: 100%;
         max-width: 550px;
     }
+
+    /* [data-content] {
+        display: none;
+    }
+    
+    .active[data-content] {
+        display: contents;
+    } */
 }

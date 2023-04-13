@@ -1,0 +1,48 @@
+.books {
+    width: 100%;
+}
+
+.book-filter {
+    width: 100%;
+}
+
+.submenu-categories {
+    width: 120px;
+    list-style: none;
+}
+
+.filter-submenu {
+    width: 100%;
+    position: absolute;
+    top: 1.8em;
+    list-style: none;
+    overflow: visible;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    background-color: var(--chalkWhite);
+}
+
+.filter_menu_link {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.filter-container {
+    cursor: pointer;
+    position: relative;
+}
+
+.filter-container:hover .filter-submenu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.filter_menu_item {
+    padding: .8em 0;
+}
+
+.filter_menu_item:hover {
+    border-bottom: 2px solid var(--lightBlue);
+    transition: all 0.2s;
+}
