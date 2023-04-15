@@ -1,6 +1,15 @@
+/* Contenedores para section libros */
 .books {
     width: 100%;
 }
+
+.list-book-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: .5em;
+}
+/* fin Contenedores para section libros */
 
 .book-filter {
     width: 100%;
@@ -14,10 +23,9 @@
 .filter-submenu {
     width: 100%;
     position: absolute;
-    top: 1.8em;
+    top: 1.5em;
     list-style: none;
     overflow: visible;
-    z-index: 1000;
     opacity: 0;
     visibility: hidden;
     background-color: var(--chalkWhite);
@@ -45,4 +53,31 @@
 .filter_menu_item:hover {
     border-bottom: 2px solid var(--lightBlue);
     transition: all 0.2s;
+}  
+/* fin menu filtro para section libros */
+
+
+@media (min-width: 950px) { 
+    
+/* Contenedores para section libros */
+    .books {
+        width: 100%;
+        display: flex;
+        gap: 2em;
+    }
+
+    .list-book-container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: .5em;
+    } 
+/* fin Contenedores para section libros */
+
+/* menu filtro para section libros */
+    .book-filter {
+        width: 20%;
+    } 
+/* fin menu filtro para section libros */
 }

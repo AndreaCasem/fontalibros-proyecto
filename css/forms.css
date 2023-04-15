@@ -20,18 +20,17 @@
     border: none;
     outline: none;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+} 
+
+/* Formulario vender libro */
+.form-sell-book {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
-
-/* [data-content] {
-    display: none;
-}
-
-.active[data-content] {
-    display: contents;
-}  */
-
 
 @media (min-width: 950px) {
+/* Formulario de contacto */
     .contact {
         display: grid;
         place-content: center;
@@ -40,13 +39,6 @@
     .form-contact {
         width: 100%;
         max-width: 550px;
-    }
-
-    /* [data-content] {
-        display: none;
-    }
-    
-    .active[data-content] {
-        display: contents;
-    } */
+    } 
+/* Fin formulario de contacto */
 }

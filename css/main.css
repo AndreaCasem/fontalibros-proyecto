@@ -1,6 +1,7 @@
 .main {
     padding: 0 2em;
     margin-top: 3em;
+    min-height: 100vh;
 }
 
 /* Intro Fontalibros */
@@ -22,10 +23,6 @@
     font-weight: bold;
 }
 
-.span-word {
-    color: var(--lightBlue);
-}
-
 .intro p {
     color: var(--darkgray);
     margin: 2em 0;
@@ -35,15 +32,6 @@
     margin: 1em 0 2em 0;
 }
 
-.btn {
-    width: 100%;
-    text-decoration: none;
-    background-color: #0095F6;
-    color: #FFFFFF;
-    padding: 10px 20px;
-    border: none;
-    border-radius: .3em;
-}
 /* fin Intro Fontalibros */
 
 /* inicio últimos añadidos */
@@ -111,7 +99,6 @@
 /* [data-content] {
     display: none;
 }
-
 .active[data-content] {
     display: contents;
 } */

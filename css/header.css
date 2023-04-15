@@ -63,10 +63,6 @@
     list-style: none;
 }
 
-.account .login, .register {
-    text-decoration: none;
-}
-
 .navbar {
     display: block;
     cursor: pointer;
@@ -180,7 +176,6 @@
     }
 
     .login {
-        text-decoration: none;
         color: var(--lightBlue);
     }
 

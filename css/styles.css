@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    text-decoration: none;
 } 
 
 :root {
@@ -39,4 +40,17 @@ section[id] {
 h2 {
     text-align: center;
     margin-bottom: 1.5em;
+}
+
+.btn { 
+    width: 100%;
+    background-color: #0095F6;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: .3em;
+}
+
+.span-word {
+    color: var(--lightBlue);
 }
