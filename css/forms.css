@@ -23,11 +23,94 @@
 } 
 
 /* Formulario vender libro */
-.form-sell-book {
+.vender-libro{
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
+
+.form-sell-book {
+    width: 100%;
+    padding: 3em;
+    border-radius: 0.3em;
+    background-color: var(--white);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+/* inicio caja subir imágenes */
+.box {
+    width: 100%;
+    padding: 1em;
+    border-radius: 0.3em;
+    margin: 1em 0;
+    background-color: var(--white);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.subir-label {
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed var(--darkgray);
+    cursor: pointer;
+    color: var(--darkgray);
+}
+
+.subir-label span {
+    font-size: 2em;
+}
+
+.uploaded {
+    margin: 1em 0;
+    font-weight: bolder;
+}
+
+.show-file-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .8em;
+    background-color: var(--chalkWhite);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+}
+
+.show-file-box  .left-file-box {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.left-file-box p {
+    font-size: 14px;
+}
+
+.file-type {
+    background-color: var(--lightBlue);
+    color: var(--white);
+    padding: .4em .6em;
+    border-radius: .3em;
+    text-transform: uppercase;
+}
+
+.right-file-box span {
+    background-color: var(--lightBlue);
+    color: var(--white);
+    width: 1em;
+    height: 1em;
+    font-size: 1.5em; 
+    text-align: center;
+    line-height: 1em;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+/* fin caja subir imágenes */
 
 @media (min-width: 950px) {
 /* Formulario de contacto */
@@ -41,4 +124,11 @@
         max-width: 550px;
     } 
 /* Fin formulario de contacto */
+
+/* Formulario vender libro */
+    .form-sell-book {
+        width: 100%;
+        max-width: 550px;
+    }
+
 }

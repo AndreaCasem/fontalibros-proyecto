@@ -75,7 +75,7 @@
             <form class="form-sell-book">
                 <div>
                     <label for="tipo-libro">Tipo de libro:</label>
-                    <select name="categoria-libro" id="categoria-libro">
+                    <select class="inputex name="categoria-libro" id="categoria-libro">
                         <option value="seleccion">Selecciona una categoría</option>
                         <option value="educacion">Educación</option>
                         <option value="literatura">Literatura</option>
@@ -92,8 +92,40 @@
                     <label for="codigo">Código ISBN:</label>
                     <input type="text" name="codigo" id="codigo" class="inputex" required>
                     <label for="imagenes">Imágenes:</label>
-                    <input type="file" name="imagenes" id="imagenes" class="inputex" required>
+                        <div class="box">
+                            <div class="input-box">
+                                <input type="file" name="imagenes" id="imagenes" accept="image/png, image/jpeg" hidden required>
+                                <label for="imagenes" class="subir-label">
+                                    <span><i class="fa-solid fa-camera"></i></span>
+                                    <p>Sube tus fotos aquí</p>
+                                </label>
+                            </div>
+                            <!-- Mostrar archivos cargados -->
+                            <div id="container-file">
+                                <p class="uploaded">Imágenes cargadas</p>
+                                <!-- <div class="show-file-box">
+                                    <div class="left-file-box">
+                                        <span class="file-type">png</span>
+                                        <p>fontalibros.png</p>
+                                    </div>
+                                    <div class="right-file-box">
+                                        <span>&#215;</span>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
                     
+                    <label for="tipo-libro">Estado del libro:</label>
+                    <select class="inputex name="categoria-calidad" id="categoria-calidad">
+                        <option value="seleccion">Selecciona un estado</option>
+                        <option value="malo">Muy malo</option>
+                        <option value="malo">Malo</option>
+                        <option value="normal">Normal</option>
+                        <option value="bueno">bueno</option>
+                        <option value="muy bueno">Muy bueno</option>
+                    </select>
+                    <label for="precio">Precio:</label>
+                    <input type="number" name="precio" id="precio" class="inputex" required>
                     <input type="Submit" value="Publicar" class="btn"></input>
                 </div>
             </form>
@@ -137,4 +169,5 @@
     <!-- Fin de footer--> 
     <!-- Scripts -->
     <script defer src="/Scripst/menu.js"></script>
+    <script defer src="/Scripst/form.js"></script>
 </body>
