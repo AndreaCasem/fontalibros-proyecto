@@ -117,14 +117,6 @@
     margin-left: 0;
 }
 
-/* [data-content] {
-    display: none;
-}
-
-.active[data-content] {
-    display: contents;
-} */
-
 @media (min-width: 950px) {
     .header {
         display: flex;
@@ -228,12 +220,4 @@
         padding: 10px 20px;
         color: var(--lightBlue);
     }
-
-    /* [data-content] {
-        display: none;
-    }
-    
-    .active[data-content] {
-        display: contents;
-    } */
 }

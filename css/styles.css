@@ -44,11 +44,17 @@ h2 {
 
 .btn { 
     width: 100%;
-    background-color: #0095F6;
+    background-color: var(--lightBlue);
     color: #FFFFFF;
     padding: 10px 20px;
     border: none;
     border-radius: .3em;
+}
+
+.btn:hover{
+    cursor: pointer;
+    box-shadow: 7px 5px 56px -14px var(--lightBlue);
+    transition: 0.4s;
 }
 
 .span-word {

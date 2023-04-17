@@ -33,13 +33,9 @@ window.addEventListener("load", () => {
         crossElem.innerHTML = "&#215;";
         rightFileBoxElem.append(crossElem);
         containerFile.append(showFileBoxElem);
-
-
         //Eliminar archivos subidos
         crossElem.addEventListener("click", () => {
             containerFile.removeChild(showFileBoxElem);
         })
-    }
-
-    
+    }  
 })
