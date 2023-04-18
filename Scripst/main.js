@@ -1,69 +1,88 @@
+//Importando y consumiendo datos de un json local para fines demostrativos
+import data from "./productos.json" assert {type: "json"};
+console.log(data);
+
 let shoppingCartArray = [];
 let total = 0;
 let productContainer = document.querySelector(".last-book-container")
+let totalElement = document.getElementById("total-price");
 
+const productsArrays = data;
 
-//Peticion de productos al servidor
-//Utilizando la API de productos de platzi para simular el consumo de datos
-fetch("https://api.escuelajs.co/api/v1/products")
-    .then(response => response.json())
-    .then(data => {
-        //limitamos a 4 productos
-        const productsArrays = data.slice(0,4)
-        console.log(productsArrays);
+productsArrays.forEach(product => {
+    // console.log(product);
+    productContainer.innerHTML += `
+    <div class="card" id="${product.id}">
+        <figure class="img-book">
+            <img src="https://picsum.photos/400/310" alt="libro">
+        </figure>
+        <h3 class="book-title" id="book-title">${product.titulo}</h3>
+        <p id="author">${product.autor}</p>
+        <p id="status">${product.estado}</p>
+        <span class="span-word" id="price">${product.precio}</span>
+        <button class="btn-add-to-cart btn" id="btn-add-to-car" data id>Añadir al carrito</button>
+    </div>`
+});
 
-        //Impresion de productos en pantalla
-        productsArrays.forEach(product => {
-            // console.log(product);
-            productContainer.innerHTML += `
-            <div class="card" id="${product.id}">
-                <figure class="img-book">
-                    <img src="${product.images[0]}" alt="libro">
-                </figure>
-                <h3 class="book-title" id="book-title">${product.title}</h3>
-                <p id="author">Autor</p>
-                <p id="status">Estado del libro</p>
-                <span class="span-word" id="price">$${product.price}</span>
-                <button class="btn-add-to-cart btn" id="btn-add-to-car" data id>Añadir al carrito</button>
-            </div>`
-        });
+//Escuchando cuando se hace click en un boton de agregar al carrito
+let addButton = document.querySelectorAll(".btn-add-to-cart");
+// console.log(addButton);
 
-        //Escuchando cuando se hace click en un boton de agregar al carrito
-        let addButton = document.querySelectorAll(".btn-add-to-cart");
-        //Transformando el NodeList a arreglo
-        // console.log(addButton);
-        addButton = [...addButton];
-        // console.log(addButton);
+//Transformando el NodeList a arreglo
+addButton = [...addButton];
+// console.log(addButton);
 
+let listContainer = document.querySelector(".list-cart");
 
-        let listContainer = document.querySelector(".list-cart");
-        addButton.forEach((btn => {
-            btn.addEventListener("click", e => {
-                // console.log("click");
-                //AGREGANDO PRODUCTOS AL CARRITO
+addButton.forEach((btn => {
+    btn.addEventListener("click", e => {
+        // console.log("click");
+        //AGREGANDO PRODUCTOS AL CARRITO
 
-                //Buscando el id del producto
-                let actualId = parseInt(e.target.parentNode.id);
-                console.log(actualId);
-                
-                //Con el id encontrar el objeto actual
-                //El parametro item representa cada uno de los elementos del arreglo
-                let actualProduct = productsArrays.find(item =>)
-
-                //Agregando el producto al carrito
-                listContainer.innerHTML += `
-                <div class="product" id="product">
-                    <img src="https://picsum.photos/400/310" alt="">
-                    <div class="text-cart">
-                        <p>Título libro</p>
-                        <span class="span-word">Precio</span>
-                    </div>
-                    <span class="delete-product"><i class="fa-solid fa-trash"></i></span>
-                </div>`
-            })
-        }))
-
+        //Buscando el id del producto
+        let actualId = parseInt(e.target.parentNode.id);
+        console.log(actualId);
         
+        //Con el id encontrar el objeto actual
+        //El parametro item representa cada uno de los elementos del arreglo
+        let actualProduct = productsArrays.find(item => item.id == actualId);
+        console.log(actualProduct);
+        //Agregando los productos al arreglo 
+        shoppingCartArray.push(actualProduct);
+        console.log(shoppingCartArray);
+
+        //Agregando el producto al carrito
+        listContainer.innerHTML += `
+        <div class="product" id="product">
+            <img src="https://picsum.photos/400/310" alt="book">
+            <div class="text-cart">
+                <p>${actualProduct.titulo}</p>
+                <span class="span-word">${actualProduct.precio}</span>
+            </div>
+            <span class="delete-product"><i class="fa-solid fa-trash"></i></span>
+        </div>`;
+
+        //Guardar los productos en el almacenamiento
+        localStorage.setItem("shoppingCartArray", JSON.stringify(shoppingCartArray));
+
+        //Actualizando el valor total
+        total = getTotal();
+        // console.log(total);
+
+        totalElement.innerText = `$${total}`;
+
+       
     });
+}))
+
+
+function getTotal() {
+    let sumTotal;
+    let total = shoppingCartArray.reduce((sum, item) => {
+        sumTotal = sum + item.precio;
+        return sumTotal;
+    }, 0);
+    return total;
+}
 
 

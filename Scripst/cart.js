@@ -10,4 +10,4 @@ btnCartOpen.addEventListener("click", () => {
 //Cerrar carrito
 btnCartClose.addEventListener("click", () => {
     containerCart.style.display = "none";
-})
+});
