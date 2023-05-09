@@ -55,8 +55,9 @@ h2 {
     cursor: pointer;
     box-shadow: 7px 5px 56px -14px var(--lightBlue);
     transition: 0.4s;
-}
+} 
 
 .span-word {
     color: var(--lightBlue);
 }
+
